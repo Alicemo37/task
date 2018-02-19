@@ -145,12 +145,11 @@ body
 .course{
     width: 410px;
     border: 1px solid #FFFF66;
-    background-color: #99FF99;
     margin: 0 7px;
 }
 .sidebar{
     width:230px;
-    background-color: #FFCCCC;
+
 
 }
 .news, .course, .sidebar{
@@ -176,6 +175,7 @@ body
     width: 20%;
     float: right;
     line-height: 35px;
+    text-align: right;
 }
 .title_right a{
     text-decoration: none;
@@ -184,5 +184,116 @@ body
 .pic_news{
     height: 80px;
     margin-top: 10px;
+    line-height: 22px;
+}
+.pic_news img,.course_pic img{
+    float: left;
+    margin: 0 5px;
+}
+.pic_news a,.course_pic a{
+    color: #cc0000;
+    text-decoration: none;
+}
+.news_list{
+    margin-top: 20px;
+}
+.news_list li{
+    list-style: none;
+    background: url("../images/list.jpg")no-repeat;
+    padding-left: 10px;
+    margin: 8px;
+    border-bottom: 1px dotted #cccccc;
+}
+.news_list  a:link,.news_list a:visited{
+    color: #000000;
+    text-decoration: none;
+}
+.news_list a:hover,.news_list a:active{
+    color: #cc0000;
+    text-decoration: none;
+}
+.date{
+    color:#999;
+    float: right;
+}
+.course_pic{
+    height: 120px;
+    margin-top: 10px;
+    line-height: 22px;
+}
+.course_type{
+    height: 37px;
+    width: 372px;
+    background: url("../images/product_type_bg.jpg")no-repeat;
+    margin: 20px auto;
+}
+.course_type li{
+    list-style: none;
+    float: left;
+    line-height: 37px;
+    margin: 0 15px;
+    text-align: center;
+}
+.video{
+    height: 185px;
+    border: 1px solid #E8E8E8;
+}
+.video_content{
+    height: 150px;
+}
+.sidebar_ad{
+    height: 55px;
+    border: 1px solid #E8E8E8;
+    margin-top: 10px;
+}
+.copyright{
+    width: 100%;
+    height: 200px;
+    background-color: #E8E8E8;
+    margin-top: 10px;
+    cleat:both;
+}
+.copyright_content{
+    width: 1000px;
+    margin: 20px auto;
+}
+.copyright_content li{
+    list-style: none;
+    float: left;
+    width: 200px;
+    background: url("../images/line.png") no-repeat right center;
+    text-align: center;
+    line-height: 30px;
+    font-family: 微软雅黑;
+}
+.copyright_content a{
+    text-decoration: none;
+    color: #999999;
+    font-size: 18px;
+}
+.copyright_content li ul li a{
+    font-size: 14px;
+}
+.list_main{
+    width: 1000px;
+    min-height: 350px;
+    _height:350px;
+    background-color: #ffffff;
+    margin: 10px auto;
 }
 
+.news_type{
+    width: 220px;
+    height: 350px;
+    border: 1px solid #E8E8E8;
+    background-color: #9fc;
+    float: left;
+}
+.list_box{
+    width: 770px;
+    min-height: 350px;
+    _height:350px;
+    background-color: #f9f;
+    border: 1px solid #E8E8E8;
+    float: right;
+}
