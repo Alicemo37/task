@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>混合布局练习</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .top{
+            height: 100px;
+            background: #dedede;
+        }
+        .main{
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            background: antiquewhite;
+        }
+        .footer{
+            width: 800px;
+            height: 100px;
+            margin: 0 auto;
+            background: aqua;
+        }
+        .left{
+            width: 200px;
+            height: 600px;
+            float: left;
+            background: brown;
+        }
+        .right{
+            width: 600px;
+            height: 600px;
+            float: right;
+            background: burlywood;
+        }
+        .sub_l{
+            width: 100px;
+            height: 600px;
+            /*position: absolute;
+            top: 0;
+            left:0;*/
+            float: left;
+            background: chartreuse;
+        }
+        .sub_r{
+            width: 300px;
+            height: 600px;
+            /*position: absolute;
+            top: 0;
+            right: 0;*/
+            float: right;
+            background: cornflowerblue;
+        }
+        .sub_m{
+            width: 200px;
+            height: 600px;
+            margin: 0 300px 0 100px;
+            background: cadetblue;
+        }
+        .head{
+            width: 800px;
+            height: 100px;
+            margin:0 auto;
+            background: crimson;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="top">
+    <div class="head"></div>
+</div>
+<div class="main">
+    <div>
+        <div class="left"></div>
+        <div class="right">
+            <div class="sub_l">sub_l</div>
+            <div class="sub_r">sub_r</div>
+            <div class="sub_m">sub_m</div>
+
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>
