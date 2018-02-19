@@ -140,7 +140,7 @@ body
 .news{
     width: 340px;
     border: 1px solid #E8E8E8;
-    background-color: #99CCFF;
+
 }
 .course{
     width: 410px;
@@ -158,3 +158,31 @@ body
     float: left;
 
 }
+.title{
+    height: 35px;
+    border-bottom: 2px solid #E8E8E8;
+}
+.title_left{
+    width: 70%;
+    font-family: 微软雅黑;
+    font-size:14px ;
+    font-weight: bold;
+    color: #786f66;
+    float: left;
+    line-height: 35px;
+    padding-left: 20px;
+}
+.title_right{
+    width: 20%;
+    float: right;
+    line-height: 35px;
+}
+.title_right a{
+    text-decoration: none;
+    color: #999999;}
+
+.pic_news{
+    height: 80px;
+    margin-top: 10px;
+}
+
