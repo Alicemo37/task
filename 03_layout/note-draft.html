@@ -1,60 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>娣峰悎甯冨眬</title>
-    <style type="text/css">
-        body{ margin:0; padding:0; font-size:30px; font-weight:bold}
-        div{ text-align:center; line-height:50px}
-        .top{ height:100px;background:#9CF}
-        .head,.main{ width:960px;margin: 0 auto;}
-        .head{ height:100px; background:#F90}
-        .left{ width:220px; height:600px; background:#ccc; float: left}
-        .right{ width:740px; height:600px;background:#FCC; float:right}
-        .r_sub_left{ width:540px; height:600px; background:#9C3; float:left}
-        .r_sub_right{ width:200px; height:600px; background:#9FC; float: right}
-        .footer{ height:50px; width: 100% ;background:#9F9;position: absolute;bottom: 0}
-        li{
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>页码的制作</title>
+    <style>
+        /*在此定义相关CSS样式*/
+        .yema{
+            height: 40px;
+
+        }
+        .yema a{
+            color: black;
+            margin: 0 10px;
             width: 50px;
-            height: 30px;
-            list-style: none;
+            display: inline-block;
             text-align: center;
-            line-height: 50px;
-            float: left;
-        }
-        li a:link,li a:visited{
+            border: 1px solid #dedede;
             text-decoration: none;
-            color: #000000;
         }
-        li a:hover,li a:active{
-            background-color: #BE3948;
-            color: #ffffff;
+        .yema a:hover,.yema a:active{
+            background-color: #99CCFF;
         }
+
     </style>
 </head>
 
 <body>
-<div class="top">
-    <div class="head">head</div>
-</div>
-<div class="main">
-    <div class="left">left</div>
-    <div class="right">
-        <div class="r_sub_left">sub_left
-        </div>
-        <div class=" r_sub_right">sub_right
-        </div>
+<!--在此制作页码的基本结构-->
+    <div class="yema">
+        <a href="#">首页</a>
+        <a href="#">&lt;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">...</a>
+        <a href="#">&gt;</a>
+        <a href="#">末页</a>
     </div>
-</div>
-<div class="footer">footer</div>
 
 
-
-<ul>
-    <li><a href="#">鍏ㄩ儴</a></li>
-    <li><a href="#">鍒濈骇</a></li>
-    <li><a href="#">涓骇</a></li>
-    <li><a href="#">楂樼骇</a></li>
-</ul>
 </body>
 </html>
