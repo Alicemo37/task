@@ -384,3 +384,23 @@ body
     line-height: 25px;
     text-indent: 2em;
 }
+
+/*这里开始是练习部分，和原课程没关系*/
+.logo_nav{
+    line-height: 80px;
+
+}
+.logo_nav a{
+    margin: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    display: inline-block;
+
+}
+.logo_nav a:hover,.logo_nav a:active{
+    background-color: #cc0000;
+}
+.pic{
+    width: 1000px;
+}

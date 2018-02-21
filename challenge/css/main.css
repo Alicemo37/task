@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding:0;
+    font-size: 12px;
+}
+body
+{
+    background: #F5F5F5;
+}
+.top
+{
+    width: 100%;
+    height:27px;
+    background: url("../images/top_bg.jpg") repeat-x;
+    /*repeat-x  水平重复*/
+}
+.top_content{
+    width: 1000px;
+    margin: 0 auto;
+}
+.top_content li{
+    list-style-image: url("../images/li_bg.gif");
+    float: right;
+    width: 70px;
+    line-height: 27px;
+}
+.top_content a:link,.top_content a:visited{
+    color: #8E8E8E;
+    text-decoration: none;
+    
+}
+.top_content a:hover,.top_content a:active{
+    color: #900;
+    text-decoration: none;
+}
+
+.wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+.logo{
+    height: 80px;
+    background: #ffffff;
+    font-size: 0px;
+}
+.logo_left{
+    width: 200px;
+    float: left;
+}
+
+
+
+.ad{
+    width: 1000px;
+    height: 310px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.main{
+    /*height: 250px;*/
+    width: 1000px;
+    background-color: #ffffff;
+    margin: 5px auto;
+
+}
+.news{
+    width: 340px;
+    border: 1px solid #E8E8E8;
+
+}
+
+/*这里开始是练习部分，和原课程没关系*/
+.logo_nav{
+    line-height: 80px;
+
+}
+.logo_nav a{
+    margin: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    display: inline-block;
+
+}
+.logo_nav a:hover,.logo_nav a:active{
+    background-color: #cc0000;
+}
+.pic{
+    width: 1000px;
+}
+.roll-news{
+    width: 1000px;
+    height: 40px;
+    margin: 20px auto;
+}
+.roll-news_left{
+    width: 20%;
+    float: left;
+    background-color: #cc0000;
+    line-height: 40px;
+    color: #ffffff;
+    font-family: 微软雅黑;
+    text-align: center;
+}
+.roll-news_right{
+    width: 780px;
+    float: left;
+    background-color: #666666;
+    line-height: 40px;
+    color: #ffffff;
+    font-family: 微软雅黑;
+    padding-left: 20px;
+}
+.ad_pic{
+    margin: 5px auto;
+    font-size: 30px;
+    font-family: 微软雅黑;
+}
+.ad_left,.ad_mid,.ad_right{
+    width: 330px;
+    float: left;
+    margin:0 1px ;
+}
+.ad_left .title,.ad_mid .title,.ad_right .title{
+    text-align: center;
+    font-family: 微软雅黑;
+    width: 328px;
+    border: 1px solid #999999;
+    margin-top: 0;
+
+}
+.hotActivity,.hotNews,.contact{
+    width: 330px;
+    border: 1px solid #cccccc;
+    float: left;
+    margin-top: 5px;
+}
+.activity .title{
+    background-color: #cc0000;
+    color: #ffffff;
+    font-size: 14px;
+    padding-left: 10px;
+    font-family: 微软雅黑;
+    height: 35px;
+    line-height: 35px;
+
+}
+.activity li{
+    list-style: none;
+}
+.activity .date{
+    width: 50px;
+    height: 50px;
+    background-color: #cc0000;
+    color: #ffffff;
+    font-family: 微软雅黑;
+    text-align: center;
+    line-height: 25px;
+    float: left;
+}
+.activity .text{
+    width: 270px;
+    float: right;
+}
+.learn1,.learn2,.learn3{
+    margin: 50px auto;
+}
+.hotActivity img{
+    width: 280px;
+    margin: 5px 25px;
+}
+.hotActivity li{
+    padding-left: 25px;
+}
+.contact_content .tel_bom{
+    margin-top: 25px;
+}
+.contact_content .tel_bom,.contact_content .tel_top{
+    padding-left: 5px;
+}
+.hotNews_content .text_title{
+    font-size: 12px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+}
