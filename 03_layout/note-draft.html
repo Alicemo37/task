@@ -1,36 +1,181 @@
-<!DOCTYPE  HTML>
-<html >
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>系好安全带,准备启航</title>
-
-    <script type="text/javascript">
-
-        //通过javascript的日期对象来得到当前的日期，并输出。
-        var weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-        var mydate=new Date();
-        document.write(mydate.getFullYear()+"年");
-        document.write(mydate.getMonth()+"月");
-        document.write(mydate.getDate()+"日");
-        document.write(weekday[mydate.getDay()]);
-
-        //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
-        var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
-        var scoreCut = scoreStr.slice(";");
-        document.write(scoreCut);
-        //从数组中将成绩撮出来，然后求和取整，并输出。
-        var sum = 0;
-
-        for (var i = 0; i < scoreCut.length; i++) {
-            var score = parseInt(scoreCut[i].split(":")[1]);
-            sum += score;
-        }
-        var avg = sum / scoreCut.length;
-        document.write(parseInt(avg));
-        document.write(parseInt(sum));
-
-    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>JavaScript</title>
 </head>
 <body>
+
+<form name="Input">
+    <table align="center" width="500px" height="50%" border="1">
+        <tr>
+            <td align="center" width="100px">
+                学号:
+            </td>
+            <td align="center" width="300px">
+                <input type="text" id=userid name="user" onblur="validate();">
+                <div id=usermsg></div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="100px">
+                姓名:
+            </td>
+            <td align="center">
+                <input type="text" name="name">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="%45">
+                性别:
+            </td>
+            <td align="center">
+                <input type="radio" name="sex" value="男">
+                男
+                <input type="radio" name="sex" value="女">
+                女
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="30%">
+                年龄:
+            </td>
+            <td align="center" width="300px">
+                <input type="text" name="age">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="100px">
+                地址:
+            </td>
+            <td align="center" width="300px">
+                <input type="text" name="addr">
+            </td>
+        </tr>
+
+    </table>
+</form>
+<h1 id="myHead" onclick="getValue()">
+    看看三种获取节点的方法?
+</h1>
+<p>
+    点击标题弹出它的值。
+</p>
+<input type="button" onclick="getElements()"
+       value="看看name为sex的节点有几个?" />
+<Br>
+<input type="button" onclick="getTagElements()"
+       value="看看标签名为input的节点有几个?" />
+
+<script type="text/javascript">
+    function getValue()
+    {
+
+        alert(myH.innerHTML)
+    }
+    function getElements()
+    {
+
+        alert(myS.length);
+    }
+
+    function getTagElements()
+    {
+
+        alert(myI.length);
+    }
+
+</script>
+
+</body>
+</html><!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>JavaScript</title>
+</head>
+<body>
+
+<form name="Input">
+    <table align="center" width="500px" height="50%" border="1">
+        <tr>
+            <td align="center" width="100px">
+                学号:
+            </td>
+            <td align="center" width="300px">
+                <input type="text" id=userid name="user" onblur="validate();">
+                <div id=usermsg></div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="100px">
+                姓名:
+            </td>
+            <td align="center">
+                <input type="text" name="name">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="%45">
+                性别:
+            </td>
+            <td align="center">
+                <input type="radio" name="sex" value="男">
+                男
+                <input type="radio" name="sex" value="女">
+                女
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="30%">
+                年龄:
+            </td>
+            <td align="center" width="300px">
+                <input type="text" name="age">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="100px">
+                地址:
+            </td>
+            <td align="center" width="300px">
+                <input type="text" name="addr">
+            </td>
+        </tr>
+
+    </table>
+</form>
+<h1 id="myHead" onclick="getValue()">
+    看看三种获取节点的方法?
+</h1>
+<p>
+    点击标题弹出它的值。
+</p>
+<input type="button" onclick="getElements()"
+       value="看看name为sex的节点有几个?" />
+<Br>
+<input type="button" onclick="getTagElements()"
+       value="看看标签名为input的节点有几个?" />
+
+<script type="text/javascript">
+    function getValue()
+    {
+        document.getElementById("myHead");
+        alert(myH.innerHTML)
+    }
+    function getElements()
+    {
+        document.getElementsByName("sex");
+        alert(myS.length);
+    }
+
+    function getTagElements()
+    {
+        document.getElementsByTagName("input");
+        alert(myI.length);
+    }
+
+</script>
+
 </body>
 </html>

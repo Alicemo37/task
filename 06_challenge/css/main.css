@@ -79,7 +79,7 @@ body
 
 }
 .logo_nav a{
-    margin: 0 30px;
+    padding:0 30px;
     text-align: center;
     text-decoration: none;
     color: #000000;
