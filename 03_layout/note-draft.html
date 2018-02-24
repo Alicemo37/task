@@ -1,15 +1,36 @@
-<!doctype html>
-<html>
+<!DOCTYPE  HTML>
+<html >
 <head>
-    <meta charset="utf-8">
-    <title>columns</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>系好安全带,准备启航</title>
+
+    <script type="text/javascript">
+
+        //通过javascript的日期对象来得到当前的日期，并输出。
+        var weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+        var mydate=new Date();
+        document.write(mydate.getFullYear()+"年");
+        document.write(mydate.getMonth()+"月");
+        document.write(mydate.getDate()+"日");
+        document.write(weekday[mydate.getDay()]);
+
+        //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+        var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+        var scoreCut = scoreStr.slice(";");
+        document.write(scoreCut);
+        //从数组中将成绩撮出来，然后求和取整，并输出。
+        var sum = 0;
+
+        for (var i = 0; i < scoreCut.length; i++) {
+            var score = parseInt(scoreCut[i].split(":")[1]);
+            sum += score;
+        }
+        var avg = sum / scoreCut.length;
+        document.write(parseInt(avg));
+        document.write(parseInt(sum));
+
+    </script>
 </head>
 <body>
-<div class="columns">
-    <h2>我要分列显示</h2>
-    <p>为了能在Web页面中方便实现类似报纸、杂志那种多列排版的布局，W3C特意给CSS3增加了一个多列布局模块（CSS Multi Column Layout Module）。它主要应用在文本的多列布局方面。对于文本的多列布局，我想大家并不陌生，因为报纸和杂志上我们随处可见，这种布局在报纸和杂志上都使用了几十年了，但需要在Web页面上实现文本的多列布局，正如下图所示。</p>
-    <p>为了能在Web页面中方便实现类似报纸、杂志那种多列排版的布局，W3C特意给CSS3增加了一个多列布局模块（CSS Multi Column Layout Module）。它主要应用在文本的多列布局方面。对于文本的多列布局，我想大家并不陌生，因为报纸和杂志上我们随处可见，这种布局在报纸和杂志上都使用了几十年了，但需要在Web页面上实现文本的多列布局，正如下图所示。</p>
-</div>
 </body>
 </html>
