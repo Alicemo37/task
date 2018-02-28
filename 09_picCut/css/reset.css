@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+ol,ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    color: #ffffff;
+}
+
+img{
+    border: none;
+    display: block;
+}
+
+.cleanFloat{
+    zoom: 1;
+}
+
+.cleanFloat:after{
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}

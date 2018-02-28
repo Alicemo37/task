@@ -1,0 +1,16 @@
+#container{
+    height: 477px;
+    margin: 0 auto;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    overflow: hidden;
+    position: relative;
+}
+
+/*让4张图片堆叠在一起，没明白是什么操作*/
+#container img{
+    position: absolute;
+    display: block;
+    left: 0;
+    border-left:1px solid #ccc;
+}
