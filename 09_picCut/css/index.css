@@ -94,13 +94,14 @@
 }
 .index-menu .menu-item .title{
     width:230px;
+    color: #555555;
+}
+.index-menu .menu-item p{
     overflow: hidden;
     white-space: nowrap;
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
-    color: #555555;
 }
-
 .index-menu .menu-item .line{
     width: 192px;
     border-top: 1px solid #e3e1e1;

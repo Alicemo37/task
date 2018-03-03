@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单美化-文本框</title>
+    <link rel="stylesheet" href="css/public.css" type="text/css">
+    <style type="text/css">
+        body{
+            font: 14px/28px "微软雅黑";
+        }
+        .contact *:focus{
+            outline:none;
+        }
+        .contact{
+            width: 700px;
+            height: auto;
+            background: #F6F6F6;
+            margin: 40px auto;
+            padding: 10px;
+        }
+        .contact ul{
+            width: 700px;
+        }
+        .contact ul li{
+            border:1px solid #ffe3c6;
+            padding: 12px;
+        }
+        .contact ul li label{
+            display: inline-block;
+            width: 120px;
+            float: left;
+        }
+        .contact ul li input[type=text]{
+            width:220px;
+            height: 20px;
+            border:1px solid #aaaaaa;
+            color: #cccccc;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            padding: 3px 8px;
+            background: url("images/red_asterisk.png") no-repeat #ffffff 98%;
+        }
+        .contact ul li input:focus{
+            border-color: #cc0000;
+            background: url("images/invalid.png") no-repeat 98%;
+        }
+        .contact ul li input[type=text]{
+            -webkit-transition: padding .25s;
+            -moz-transition: padding .25s;
+            -ms-transition: padding .25s;
+            -o-transition: padding .25s;
+            transition: padding .25s;
+        }
+        .contact ul li input:focus{
+            padding-right: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact">
+        <form action="#" method="post" name="cForm"></form>
+        <ul>
+            <li>
+                <label >姓名</label>
+                <input type="text" name="yourname" placeholder="SunBest" required>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
