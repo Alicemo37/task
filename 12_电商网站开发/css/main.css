@@ -1,0 +1,191 @@
+
+/*公共样式*/
+.comWidth{
+    width: 1000px;
+    margin: 0 auto;
+
+}
+.leftArea{
+    float: left;
+}
+.rightArea{
+    float: right;
+}
+
+/*头部*/
+.topBar{
+    height:31px;
+    background: #f7f7f7;
+    line-height: 31px;
+}
+.topBar .collection{
+    background: url("../images/topBar-star.png")left center no-repeat;
+    padding-left: 19px;
+    font-weight: bold;
+}
+.topBar a:hover{
+    color: #cc0000;
+}
+/*logo*/
+.logoBar{
+    height: 85px;
+    background: #1d7ad9;
+}
+.logoBar .logo{
+    padding-left: 41px;
+    padding-top: 13px;
+}
+
+.search_box{
+    width: 430px;
+    padding-top: 23px;
+    padding-left: 185px;
+}
+.searchText{
+    width: 350px;
+    height: 35px;
+    /*\9代表所有ie浏览器*/
+    line-height: 35px\9;
+    padding: 0 5px;
+    background: #ffffff;
+}
+.searchBtn{
+    width: 70px;
+    height: 35px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    background: #FF8C00;
+    color: #ffffff;
+}
+.shopCar{
+    width: 145px;
+    height: 35px;
+    background-color: #FF8C00;
+    margin-top: 23px;
+    margin-right:59px ;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    line-height: 35px;
+    color: #ffffff;
+}
+.shopText{
+
+    height: 100%;
+    width: 87px;
+    border-right:#E27A00 solid 1px;
+    background: url("../images/shopCar.png")10px center no-repeat;
+    text-indent: 40px;
+}
+.shopNum{
+    width: 17px;
+    height: 35px;
+    border-left:#FF9C01 solid 1px;
+    background:url("../images/shopCar-jt.jpg") 33px center no-repeat;
+    text-align: right;
+    padding-right: 39px;
+}
+/*导航*/
+.navBox{
+    height: 35px;
+    background-color: #1369c0;
+    color: #ffffff;
+}
+.shopClass{
+    width: 190px;
+    line-height: 35px;
+    position: relative;
+}
+.shopClass h3{
+    text-align: center;
+}
+.shopClass i{
+    width: 11px;
+    height: 7px;
+    overflow: hidden;
+    background: url("../images/nav-jt.png") left center no-repeat;
+    display: inline-block;
+    margin-left: 11px;
+}
+.nav,.shopClass{
+    font-family: "微软雅黑";
+}
+.nav{
+    line-height: 35px;
+}
+.nav li{
+    float: left;
+}
+.nav li a{
+    height: 35px;
+    display: inline-block;
+    padding: 0 35px;
+    color: #ffffff;
+}
+.nav li a:active{
+    background-color: #4593fd;
+}
+/*商品弹出列表*/
+.shopClass_show{
+    background-color: #4593fd;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 100%;
+}
+.shopClass_item{
+    padding: 14px 10px;
+    border-bottom: #3487f2 solid 1px;
+    border-top: #5aa1fe solid 1px;
+}
+.shopClass_item .b{
+    /*font-family: "微软雅黑";*/
+    /*font-size:14px;*/
+    font-weight: bold;
+    font: 14px/1 "微软雅黑";
+}
+.shopClass_item a{
+    color: #ffffff;
+}
+.shopClass_item dt{
+    height: 22px;
+    line-height: 22px;
+    background: url("../images/shop_jt.png") right center no-repeat;
+}
+.shopClass_item .aLink{
+    width: 48px;
+    height:20px;
+    background: url(../images/aLink_bg.png) left center no-repeat;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    text-decoration: #ffffff;
+}
+/*弹出的菜单*/
+.shopClass_list{
+    width:568px;
+    height:378px;
+    border:#ccc solid 1px;
+    position: absolute;
+    left: 190px;
+    top: 35px;
+}
+.shopList_item{
+    padding: 10px 0;
+    border-bottom: #cccccc dotted 1px;
+}
+
+.shopClass_list dt{
+    color: #4b87d9;
+    font-weight: bold;
+    line-height: 24px;
+    height: 14px;
+}
+.shopClass_list dd{
+    padding-left: 68px;
+    line-height: 24px;
+    margin-top: -14px;
+}
+.shopClass_list dd a{
+    padding-left: 12px;
+
+}
