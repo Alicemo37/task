@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #333333;
+            overflow: hidden;
+            height: 100%;
+        }
+        #canvas{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+        }
+        /*li{
+            line-height: 568px;
+            vertical-align: middle;
+        }
+        li img{
+
+            vertical-align: middle;
+        }*/
+        li{
+            position: absolute;
+            display: table-cell;
+            vertical-align:middle;
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+        }
+        #canvas ul li{
+            height: 568px;
+            position: absolute;
+        }
+    </style>
+    <title>图片滑动组件</title>
+</head>
+<body>
+        <!--外层画布-->
+    <div id="canvas">
+      <!--  <ul>
+            <li style="  -webkit-transform:translate3d(0,0,0);">
+                <img width="360px" src="images/1.jpg">
+            </li>
+            <li style="  -webkit-transform:translate3d(360px,0,0);">
+                <img width="360px" src="images/2.jpg">
+            </li>
+            <li style="  -webkit-transform:translate3d(720px,0,0);">
+                <img width="360px" src="images/3.jpg">
+            </li>
+
+        </ul>-->
+    </div>
+        <!--suppress JSAnnotator -->
+        <script>
+            // <!--定义数组存储数据-->
+            var list = [{
+                height:1280,
+                width:500,
+                img:'images/1.jpg'
+                 },
+                {
+                    height:1280,
+                    width:500,
+                    img:'images/2.jpg'
+                },
+                {
+                    height:1280,
+                    width:500,
+                    img:'images/3.jpg'
+                },
+                {
+                    height:1280,
+                    width:500,
+                    img:'images/4.jpg'
+                }
+            ];
+            function Slider(opts) {
+                this.wrap = opts.dom;
+                this.list = opts.list;
+                //构造三部曲
+                this.init();
+                this.renderDOM();
+                this.binDOM();
+
+            }
+            Slider.prototype.init = function () {
+                //算出窗口的长宽比
+                this.radio = window.innerHeight/window.innerWidth;
+                this.scaleW =window.innerWidth;
+                //当前图片的索引
+                this.idx = 0;
+            };
+            Slider.prototype.random = function () {
+                var wrap = this.wrap;
+                var data = this.list;
+                var len = data.length;
+                var scale = this.scaleW;
+
+                this.outer = document.createElement('ul');
+                for(var i=0;i<len;i++){
+                    var li = document.createElement('li');
+                    var item = data[i];
+                    li.style.width = scale+ 'px';
+                    li.style.webkitTransform = 'translate3d('+ i* scaleW +'px,0,0)';
+
+                    if(item){
+                        if(item['height']/item['width']>this.radio){
+                            li.innerHTML = '<img width="'+ window.innerHeight +'" src="'+item['src']+'">';
+                        }
+                        else{
+                            li.innerHTML = '<img width="'+ window.innerWidth +'" src="'+item['src']+'">';
+                        }
+                    }
+                    this.outer.appendChild(li);
+                }
+                this.outer.style.width = scale + 'px';
+                wrap.style.height = window.innerHeight + 'px';
+                wrap.appendChild(this.outer);
+
+            };
+            Slider.prototype.binDOM = function () {
+                var wrap = this.wrap;
+                var data = this.list;
+                var len = data.length;
+                var scale = this.scaleW;
+
+                this.outer = document.createElement('ul');
+                for(var i=0;i<len;i++){
+                    var item = data[i];
+                    var li = document.createElement('li');
+                    if(item){
+                        if(item['height']/item['width']>this.radio){
+                            li.innerHTML = '<img height="'+ window.innerHeight  +'" src="'+ item['img'] +'">'
+                        }
+                        else{
+                            li.innerHTML = '<img width="'+ window.innerWidth +'" src="'+item['src']+'">';
+                        }
+                    }
+                    li.style.webkitTransform = 'translate3d('+ i*scale +'px,0,0)';
+                    this.outer.appendChild(li);
+                }
+                wrap.style.height = window.innerHeight + 'px';
+                wrap.appendChild(this.outer);
+            };
+            Slider.prototype.binDOM = function () {
+                var self = this;
+                var scale = self.scaleW;
+                var outer = self.outer;
+                var len = self.list.length;
+
+                var startHandler = function (evt) {
+                    self.startX = evt.touches[0].pageX;
+
+                    self.offsetX = 0;
+
+                    self.startTime = new Date() * 1;
+                };
+                var moverHandler = function (evt) {
+                    evt.preventDefault();
+                    self.offsetX = evt.touches[0].pageX - self.startX;
+                    var lis = outer.getElementsByTagName('li');
+                    var i = self.idx - 1;
+                    var m = self.idx + 1;
+                    for(i;i<m;i++){
+                        lis[i] && (lis[i].style.webkitTransform = 'translate3d('+ ((i-self.idx)*scale+self.offsetX) +'px,0,0)');
+                    }
+                };
+                var endHandler =function (evt) {
+                    var bunndary = scale/6;
+
+                    var endTime = new Date()*1;
+
+                    var lis = outer.getElementsByTagName('li');
+                    if(endTime - self.startTime>800){
+                        if(self.offsetX >= onboundary){
+                            //进入上一页
+                            self.go('-1');
+                        }
+                        else if(self.offsetX< -bunndary){
+                            //进入下一页
+                            self.go('+1');
+                        }
+                        else{
+                            //留在本页
+                            self.go('0');
+                        }
+                    }
+                    else {
+                        //快操作
+                        //优化
+                        if(self.offsetX>50){
+                            self.go('-1');
+                        }
+                        else if(self.offsetX<-50){
+                            self.go('+1');
+                        }
+                        else {
+                            self.go('0');
+                        }
+                    }
+
+
+                };
+                outer.addEventListener('touchstart',startHandler);
+                outer.addEventListener('touchmove',movetHandler);
+                outer.addEventListener('touchend',endHandler);
+            };
+            new Slider(
+                {
+                    'dom':document.getElementById('canvas'),
+                    'list':list
+                }
+            )
+        </script>
+</body>
+</html>
